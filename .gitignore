@@ -286,4 +286,5 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-aws-lambda-tools-defaults*
+/Watson.Lambda.PersonalInsights/aws-lambda-tools-defaults.json
+/Watson.Lambda.ToneAnalyzer/aws-lambda-tools-defaults.json
