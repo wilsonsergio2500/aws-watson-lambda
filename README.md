@@ -14,3 +14,30 @@
 ###### Create AWS API Gateway to target your created Lamba Functions.
 ###### In the method of the API Gateway -> Go To Integration Request -> Body Mapping Templates
 ###### Add content type "application/json"
+###### If a method is "GET" add the following template
+```
+{
+
+    "method": "$context.httpMethod",
+
+    "body" : {
+    #foreach($queryParam in $input.params().querystring.keySet())
+    "$queryParam": "$util.escapeJavaScript($input.params().querystring.get($queryParam))" #if($foreach.hasNext),#end
+
+    #end
+  },  
+
+    "headers": {
+
+        #foreach($param in $input.params().header.keySet())
+
+        "$param": "$util.escapeJavaScript($input.params().header.get($param))"
+
+        #if($foreach.hasNext),#end
+
+        #end
+
+    }
+
+}
+```
