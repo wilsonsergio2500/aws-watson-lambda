@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IBM.WatsonDeveloperCloud.PersonalityInsights.v3" Version="2.1.0" />
+    <PackageReference Include="IBM.WatsonDeveloperCloud.ToneAnalyzer.v3" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.4" />
+  </ItemGroup>
+
+</Project>
